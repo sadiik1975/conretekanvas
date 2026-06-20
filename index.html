@@ -1,0 +1,385 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Concrete Kanvas | Create. Build. Leave Your Mark.</title>
+
+<meta name="description"
+content="Concrete Kanvas blends graffiti culture, limited-edition streetwear, exclusive music, and creative ownership. Discover the SYNK Collection and unlock The Vault." />
+
+<meta property="og:title"
+content="Concrete Kanvas | Create. Build. Leave Your Mark." />
+
+<meta property="og:description"
+content="Limited streetwear. Exclusive Vault access. Graffiti culture meets creative ownership." />
+
+<link rel="stylesheet" href="styles.css" />
+
+<style>
+
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#111;
+  color:#fff;
+}
+
+nav{
+  padding:20px;
+  text-align:center;
+  background:#000;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin:0 15px;
+  font-weight:bold;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.hero{
+  min-height:90vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:40px 20px;
+}
+
+.hero h1{
+  font-size:4rem;
+  margin-bottom:10px;
+  text-transform:uppercase;
+  letter-spacing:4px;
+}
+
+.hero p{
+  max-width:700px;
+  font-size:1.2rem;
+  color:#ccc;
+}
+
+.hero-box{
+  margin-top:40px;
+  border:2px solid #fff;
+  padding:30px;
+  max-width:500px;
+}
+
+.hero-box h3{
+  margin-top:0;
+}
+
+.highlight{
+  color:#f1c40f;
+  font-weight:bold;
+}
+
+button{
+  background:#fff;
+  color:#000;
+  border:none;
+  padding:12px 24px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:.3s;
+}
+
+button:hover{
+  background:#f1c40f;
+}
+
+section{
+  padding:80px 20px;
+  text-align:center;
+}
+
+.drop{
+  background:#161616;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+  max-width:1200px;
+  margin:auto;
+  margin-top:40px;
+}
+
+.card{
+  background:#222;
+  padding:20px;
+}
+
+.card img{
+  width:100%;
+}
+
+.size-selector{
+  color:#aaa;
+  margin-bottom:15px;
+}
+
+.story{
+  max-width:900px;
+  margin:auto;
+}
+
+.mission{
+  background:#0d0d0d;
+}
+
+.subscribe{
+  background:#181818;
+}
+
+.subscribe input{
+  padding:12px;
+  width:300px;
+  max-width:90%;
+  margin-right:10px;
+}
+
+footer{
+  background:#000;
+  text-align:center;
+  padding:30px;
+  color:#777;
+}
+
+.tagline{
+  font-size:1.5rem;
+  margin-top:20px;
+  font-weight:bold;
+  color:#f1c40f;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="#drop">Shop</a>
+  <a href="#vault">The Vault</a>
+  <a href="#movement">Movement</a>
+  <a href="#join">Join</a>
+</nav>
+
+<header class="hero">
+
+  <h1>Concrete Kanvas</h1>
+
+  <p>
+    Graffiti Culture. Creative Ownership.
+    Limited Releases.
+  </p>
+
+  <div class="tagline">
+    CREATE. BUILD. LEAVE YOUR MARK.
+  </div>
+
+  <div class="hero-box">
+
+    <h3>DROP #1: SYNK COLLECTION</h3>
+
+    <p>
+      Limited-edition streetwear inspired by
+      urban art, creative independence,
+      and modern culture.
+    </p>
+
+    <p class="highlight">
+      Includes Exclusive Vault Access
+    </p>
+
+    <button onclick="document.getElementById('drop').scrollIntoView({behavior:'smooth'})">
+      Enter The Drop
+    </button>
+
+  </div>
+
+</header>
+
+<section id="movement" class="mission">
+
+  <h2>More Than A Clothing Brand</h2>
+
+  <p>
+    Concrete Kanvas was created for people who
+    build, create, and move culture forward.
+  </p>
+
+  <p>
+    We believe creativity should generate
+    opportunity. Every collection is designed
+    to connect art, music, technology,
+    and self-development.
+  </p>
+
+  <p class="highlight">
+    Wear The Art. Unlock The Knowledge.
+  </p>
+
+</section>
+
+<section id="drop" class="drop">
+
+  <h2>SYNK Collection</h2>
+
+  <p>
+    Small-batch releases.
+    No mass production.
+  </p>
+
+  <div class="grid">
+
+    <div class="card">
+
+      <img src="img/synk.png"
+      alt="SYNK Signature Tee" />
+
+      <h3>SYNK Signature Tee</h3>
+
+      <p>$35</p>
+
+      <div class="size-selector">
+        Sizes: S, M, L, XL, 2XL, 3XL
+      </div>
+
+      <a href="https://www.tiktok.com/t/ZP9jnLguR1cBM-uHfts/" target="_blank">
+        <button>Buy Now</button>
+      </a>
+
+    </div>
+
+    <div class="card">
+
+      <img src="img/ck.png"
+      alt="Concrete Kanvas Hoodie" />
+
+      <h3>Concrete Kanvas Hoodie</h3>
+
+      <p>$65</p>
+
+      <div class="size-selector">
+        Sizes: S, M, L, XL, 2XL, 3XL
+      </div>
+
+      <a href="https://www.tiktok.com/t/ZP9jnLwaCWPXF-VKpze/" target="_blank">
+        <button>Buy Now</button>
+      </a>
+
+    </div>
+
+    <div class="card">
+
+      <img src="img/glitch.png"
+      alt="Glitch City Tee" />
+
+      <h3>Glitch City Tee</h3>
+
+      <p>$35</p>
+
+      <div class="size-selector">
+        Sizes: S, M, L, XL, 2XL, 3XL
+      </div>
+
+      <a href="https://www.tiktok.com/t/ZP9jnLoXGTjtt-8ySZu/" target="_blank">
+        <button>Buy Now</button>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="vault" class="story">
+
+  <h2>The Vault</h2>
+
+  <p>
+    Every piece is a key.
+  </p>
+
+  <p>
+    Scan your QR code to unlock
+    exclusive music, creative resources,
+    AI-powered tools, artist stories,
+    behind-the-scenes content,
+    and future drops.
+  </p>
+
+  <p>
+    The Vault transforms every release
+    into an ongoing experience.
+  </p>
+
+</section>
+
+<section class="story">
+
+  <h2>The Vision</h2>
+
+  <p>
+    The world doesn't need more clothing.
+    It needs more creators.
+  </p>
+
+  <p>
+    Concrete Kanvas exists to inspire
+    people to turn ideas into reality,
+    art into opportunity,
+    and creativity into ownership.
+  </p>
+
+</section>
+
+<section id="join" class="subscribe">
+
+  <h2>Join The Drop List</h2>
+
+  <p>
+    Get early access to releases,
+    exclusive Vault content,
+    and future collaborations.
+  </p>
+
+  <form>
+    <input
+      type="email"
+      placeholder="Enter your email"
+      required />
+
+    <button type="submit">
+      Join The List
+    </button>
+  </form>
+
+</section>
+
+<footer>
+
+  <p>
+    © 2026 Concrete Kanvas.
+  </p>
+
+  <p>
+    Create. Build. Leave Your Mark.
+  </p>
+
+</footer>
+
+</body>
+</html>

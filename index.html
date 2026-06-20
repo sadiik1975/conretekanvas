@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,161 +6,155 @@
 
 <title>Concrete Kanvas | Create. Build. Leave Your Mark.</title>
 
-<meta name="description"
-content="Concrete Kanvas blends graffiti culture, limited-edition streetwear, exclusive music, and creative ownership. Discover the SYNK Collection and unlock The Vault." />
+<meta name="description" content="Concrete Kanvas is a creative label blending graffiti, streetwear, music, and digital culture." />
 
-<meta property="og:title"
-content="Concrete Kanvas | Create. Build. Leave Your Mark." />
-
-<meta property="og:description"
-content="Limited streetwear. Exclusive Vault access. Graffiti culture meets creative ownership." />
-
-<link rel="stylesheet" href="styles.css" />
+<meta property="og:title" content="Concrete Kanvas" />
+<meta property="og:description" content="A creative platform for streetwear, art, and digital expression." />
 
 <style>
 
-body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:#111;
-  color:#fff;
+html {
+  scroll-behavior: smooth;
 }
 
-nav{
-  padding:20px;
-  text-align:center;
-  background:#000;
-  position:sticky;
-  top:0;
-  z-index:100;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #fff;
 }
 
-nav a{
-  color:#fff;
-  text-decoration:none;
-  margin:0 15px;
-  font-weight:bold;
-  text-transform:uppercase;
-  letter-spacing:1px;
+/* NAV */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #000;
+  border-bottom: 1px solid #222;
+  text-align: center;
+  padding: 15px;
 }
 
-.hero{
-  min-height:90vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:40px 20px;
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 10px 14px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
-.hero h1{
-  font-size:4rem;
-  margin-bottom:10px;
-  text-transform:uppercase;
-  letter-spacing:4px;
+nav a:hover {
+  background: #f1c40f;
+  color: #000;
 }
 
-.hero p{
-  max-width:700px;
-  font-size:1.2rem;
-  color:#ccc;
+/* HERO */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
 }
 
-.hero-box{
-  margin-top:40px;
-  border:2px solid #fff;
-  padding:30px;
-  max-width:500px;
+.hero h1 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
 }
 
-.hero-box h3{
-  margin-top:0;
+.hero p {
+  max-width: 700px;
+  color: #ccc;
 }
 
-.highlight{
-  color:#f1c40f;
-  font-weight:bold;
+.tagline {
+  margin-top: 15px;
+  font-size: 1.3rem;
+  color: #f1c40f;
+  font-weight: bold;
 }
 
-button{
-  background:#fff;
-  color:#000;
-  border:none;
-  padding:12px 24px;
-  font-weight:bold;
-  cursor:pointer;
-  transition:.3s;
+/* BUTTON */
+button {
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 15px;
 }
 
-button:hover{
-  background:#f1c40f;
+button:hover {
+  background: #f1c40f;
 }
 
-section{
-  padding:80px 20px;
-  text-align:center;
+/* SECTIONS */
+section {
+  padding: 80px 20px;
+  text-align: center;
 }
 
-.drop{
-  background:#161616;
+.mission {
+  background: #0d0d0d;
 }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
-  max-width:1200px;
-  margin:auto;
-  margin-top:40px;
+.drop {
+  background: #161616;
 }
 
-.card{
-  background:#222;
-  padding:20px;
+.story {
+  max-width: 900px;
+  margin: auto;
 }
 
-.card img{
-  width:100%;
+.highlight {
+  color: #f1c40f;
+  font-weight: bold;
 }
 
-.size-selector{
-  color:#aaa;
-  margin-bottom:15px;
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 40px auto 0;
 }
 
-.story{
-  max-width:900px;
-  margin:auto;
+.card {
+  background: #222;
+  padding: 20px;
+  border-radius: 6px;
 }
 
-.mission{
-  background:#0d0d0d;
+.card img {
+  width: 100%;
+  display: block;
 }
 
-.subscribe{
-  background:#181818;
+/* COMING SOON */
+.coming {
+  background: #0a0a0a;
 }
 
-.subscribe input{
-  padding:12px;
-  width:300px;
-  max-width:90%;
-  margin-right:10px;
+.coming h2 {
+  font-size: 2.2rem;
+  color: #f1c40f;
 }
 
-footer{
-  background:#000;
-  text-align:center;
-  padding:30px;
-  color:#777;
-}
-
-.tagline{
-  font-size:1.5rem;
-  margin-top:20px;
-  font-weight:bold;
-  color:#f1c40f;
+/* FOOTER */
+footer {
+  background: #000;
+  text-align: center;
+  padding: 25px;
+  color: #777;
 }
 
 </style>
@@ -170,215 +163,87 @@ footer{
 <body>
 
 <nav>
-  <a href="#drop">Shop</a>
-  <a href="#vault">The Vault</a>
-  <a href="#movement">Movement</a>
-  <a href="#join">Join</a>
+  <a href="#drop">Collection</a>
+  <a href="#vault">Vault</a>
+  <a href="#movement">About</a>
+  <a href="#join">Drop</a>
 </nav>
 
 <header class="hero">
-
   <h1>Concrete Kanvas</h1>
-
-  <p>
-    Graffiti Culture. Creative Ownership.
-    Limited Releases.
-  </p>
+  <p>Art. Culture. Expression. Built from graffiti, music, and digital creativity.</p>
 
   <div class="tagline">
     CREATE. BUILD. LEAVE YOUR MARK.
   </div>
 
-  <div class="hero-box">
-
-    <h3>DROP #1: SYNK COLLECTION</h3>
-
-    <p>
-      Limited-edition streetwear inspired by
-      urban art, creative independence,
-      and modern culture.
-    </p>
-
-    <p class="highlight">
-      Includes Exclusive Vault Access
-    </p>
-
-    <button onclick="document.getElementById('drop').scrollIntoView({behavior:'smooth'})">
-      Enter The Drop
-    </button>
-
-  </div>
-
+  <button onclick="document.getElementById('drop').scrollIntoView({behavior:'smooth'})">
+    Explore Collection
+  </button>
 </header>
 
 <section id="movement" class="mission">
-
-  <h2>More Than A Clothing Brand</h2>
-
-  <p>
-    Concrete Kanvas was created for people who
-    build, create, and move culture forward.
-  </p>
-
-  <p>
-    We believe creativity should generate
-    opportunity. Every collection is designed
-    to connect art, music, technology,
-    and self-development.
-  </p>
-
-  <p class="highlight">
-    Wear The Art. Unlock The Knowledge.
-  </p>
-
+  <h2>More Than Clothing</h2>
+  <p>Concrete Kanvas is a creative label built for creators, builders, and thinkers.</p>
+  <p>It blends art, design, music, and technology into wearable ideas and digital expression.</p>
+  <p class="highlight">Create. Build. Leave Your Mark.</p>
 </section>
 
 <section id="drop" class="drop">
-
   <h2>SYNK Collection</h2>
-
-  <p>
-    Small-batch releases.
-    No mass production.
-  </p>
 
   <div class="grid">
 
     <div class="card">
-
-      <img src="img/synk.png"
-      alt="SYNK Signature Tee" />
-
-      <h3>SYNK Signature Tee</h3>
-
+      <img src="img/synk.png" />
+      <h3>SYNK Tee</h3>
       <p>$35</p>
-
-      <div class="size-selector">
-        Sizes: S, M, L, XL, 2XL, 3XL
-      </div>
-
-      <a href="https://www.tiktok.com/t/ZP9jnLguR1cBM-uHfts/" target="_blank">
-        <button>Buy Now</button>
-      </a>
-
+      <a href="https://www.tiktok.com" target="_blank"><button>View</button></a>
     </div>
 
     <div class="card">
-
-      <img src="img/ck.png"
-      alt="Concrete Kanvas Hoodie" />
-
-      <h3>Concrete Kanvas Hoodie</h3>
-
+      <img src="img/ck.png" />
+      <h3>CK Hoodie</h3>
       <p>$65</p>
-
-      <div class="size-selector">
-        Sizes: S, M, L, XL, 2XL, 3XL
-      </div>
-
-      <a href="https://www.tiktok.com/t/ZP9jnLwaCWPXF-VKpze/" target="_blank">
-        <button>Buy Now</button>
-      </a>
-
+      <a href="https://www.tiktok.com" target="_blank"><button>View</button></a>
     </div>
 
     <div class="card">
-
-      <img src="img/glitch.png"
-      alt="Glitch City Tee" />
-
+      <img src="img/glitch.png" />
       <h3>Glitch City Tee</h3>
-
       <p>$35</p>
-
-      <div class="size-selector">
-        Sizes: S, M, L, XL, 2XL, 3XL
-      </div>
-
-      <a href="https://www.tiktok.com/t/ZP9jnLoXGTjtt-8ySZu/" target="_blank">
-        <button>Buy Now</button>
-      </a>
-
+      <a href="https://www.tiktok.com" target="_blank"><button>View</button></a>
     </div>
 
   </div>
-
 </section>
 
 <section id="vault" class="story">
-
   <h2>The Vault</h2>
-
-  <p>
-    Every piece is a key.
-  </p>
-
-  <p>
-    Scan your QR code to unlock
-    exclusive music, creative resources,
-    AI-powered tools, artist stories,
-    behind-the-scenes content,
-    and future drops.
-  </p>
-
-  <p>
-    The Vault transforms every release
-    into an ongoing experience.
-  </p>
-
+  <p>Music, behind-the-scenes, and future drops coming soon.</p>
 </section>
 
 <section class="story">
-
   <h2>The Vision</h2>
-
-  <p>
-    The world doesn't need more clothing.
-    It needs more creators.
-  </p>
-
-  <p>
-    Concrete Kanvas exists to inspire
-    people to turn ideas into reality,
-    art into opportunity,
-    and creativity into ownership.
-  </p>
-
+  <p>We are building a platform where ideas become expression.</p>
 </section>
 
-<section id="join" class="subscribe">
+<!-- ✅ NEW COMING SOON SECTION -->
+<section id="join" class="coming">
 
-  <h2>Join The Drop List</h2>
+  <h2>DROP 01 — COMING SOON</h2>
 
-  <p>
-    Get early access to releases,
-    exclusive Vault content,
-    and future collaborations.
+  <p>We are building something powerful.</p>
+
+  <p class="highlight">
+    Join early access for drops, music, and AI visuals.
   </p>
-
-  <form>
-    <input
-      type="email"
-      placeholder="Enter your email"
-      required />
-
-    <button type="submit">
-      Join The List
-    </button>
-  </form>
 
 </section>
 
 <footer>
-
-  <p>
-    © 2026 Concrete Kanvas.
-  </p>
-
-  <p>
-    Create. Build. Leave Your Mark.
-  </p>
-
+  <p>© 2026 Concrete Kanvas</p>
+  <p>Create. Build. Leave Your Mark.</p>
 </footer>
 
 </body>

@@ -4,247 +4,167 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Concrete Kanvas | Create. Build. Leave Your Mark.</title>
+<title>Concrete Kanvas — SYNK Collection | Tees & Hoodies</title>
 
-<meta name="description" content="Concrete Kanvas is a creative label blending graffiti, streetwear, music, and digital culture." />
+<meta name="description" content="Concrete Kanvas — the SYNK Collection. Graffiti-built streetwear: the SYNK Tee, CK Hoodie, and Glitch City Tee. Join Drop 01 early access." />
 
-<meta property="og:title" content="Concrete Kanvas" />
-<meta property="og:description" content="A creative platform for streetwear, art, and digital expression." />
+<meta property="og:title" content="Concrete Kanvas — SYNK Collection" />
+<meta property="og:description" content="Graffiti-built streetwear. Tees & hoodies from the SYNK Collection." />
+<meta property="og:image" content="img/ck.png" />
+<meta property="og:type" content="website" />
 
-<style>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #111;
-  color: #fff;
-}
-
-/* NAV */
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: #000;
-  border-bottom: 1px solid #222;
-  text-align: center;
-  padding: 15px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 10px;
-  padding: 10px 14px;
-  border: 1px solid #333;
-  border-radius: 4px;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-nav a:hover {
-  background: #f1c40f;
-  color: #000;
-}
-
-/* HERO */
-.hero {
-  min-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.hero h1 {
-  font-size: 3.5rem;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-}
-
-.hero p {
-  max-width: 700px;
-  color: #ccc;
-}
-
-.tagline {
-  margin-top: 15px;
-  font-size: 1.3rem;
-  color: #f1c40f;
-  font-weight: bold;
-}
-
-/* BUTTON */
-button {
-  background: #fff;
-  color: #000;
-  border: none;
-  padding: 12px 20px;
-  cursor: pointer;
-  font-weight: bold;
-  margin-top: 15px;
-}
-
-button:hover {
-  background: #f1c40f;
-}
-
-/* SECTIONS */
-section {
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.mission {
-  background: #0d0d0d;
-}
-
-.drop {
-  background: #161616;
-}
-
-.story {
-  max-width: 900px;
-  margin: auto;
-}
-
-.highlight {
-  color: #f1c40f;
-  font-weight: bold;
-}
-
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  max-width: 1100px;
-  margin: 40px auto 0;
-}
-
-.card {
-  background: #222;
-  padding: 20px;
-  border-radius: 6px;
-}
-
-.card img {
-  width: 100%;
-  display: block;
-}
-
-/* COMING SOON */
-.coming {
-  background: #0a0a0a;
-}
-
-.coming h2 {
-  font-size: 2.2rem;
-  color: #f1c40f;
-}
-
-/* FOOTER */
-footer {
-  background: #000;
-  text-align: center;
-  padding: 25px;
-  color: #777;
-}
-
-</style>
+<link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
-<nav>
-  <a href="#drop">Collection</a>
-  <a href="#vault">Vault</a>
-  <a href="#movement">About</a>
-  <a href="#join">Drop</a>
-</nav>
+<!-- Announcement bar — owner-editable text. This is the page's single Drop 01 announcement element (CK-008). -->
+<div class="announce coming-soon">
+  <span>DROP 01 — EARLY ACCESS OPEN</span>
+</div>
 
-<header class="hero">
-  <h1>Concrete Kanvas</h1>
-  <p>Art. Culture. Expression. Built from graffiti, music, and digital creativity.</p>
-
-  <div class="tagline">
-    CREATE. BUILD. LEAVE YOUR MARK.
+<header class="site-header">
+  <a class="logo" href="#top">Concrete&nbsp;Kanvas</a>
+  <nav class="main-nav" aria-label="Main">
+    <a href="#shop">Shop</a>
+    <a href="#tiktok">Collection</a>
+    <a href="#world">World</a>
+  </nav>
+  <div class="header-actions">
+    <a class="icon-link" href="#tiktok" aria-label="Concrete Kanvas on TikTok">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M16.6 3c.4 2.1 1.8 3.6 4 3.9v3c-1.6 0-3-.5-4-1.3v6.6c0 3.4-2.5 5.8-5.7 5.8A5.6 5.6 0 0 1 5.2 15c0-3.2 2.6-5.7 6-5.5v3.1c-1.6-.3-3 .8-3 2.4 0 1.4 1.1 2.5 2.6 2.5 1.6 0 2.8-1.2 2.8-3V3h3z"/></svg>
+    </a>
+    <a class="btn btn-accent btn-small" href="#join">Drop 01</a>
   </div>
-
-  <button onclick="document.getElementById('drop').scrollIntoView({behavior:'smooth'})">
-    Explore Collection
-  </button>
 </header>
 
-<section id="movement" class="mission">
-  <h2>More Than Clothing</h2>
-  <p>Concrete Kanvas is a creative label built for creators, builders, and thinkers.</p>
-  <p>It blends art, design, music, and technology into wearable ideas and digital expression.</p>
-  <p class="highlight">Create. Build. Leave Your Mark.</p>
-</section>
+<main id="top">
 
-<section id="drop" class="drop">
-  <h2>SYNK Collection</h2>
-
-  <div class="grid">
-
-    <div class="card">
-      <img src="img/synk.png" />
-      <h3>SYNK Tee</h3>
-      <p>$35</p>
-      <a href="https://www.tiktok.com/t/ZP9jnLguR1cBM-uHfts/" target="_blank"><button>View</button></a>
+  <!-- HERO — full-screen, crossfading visuals, fades only -->
+  <section class="hero" aria-label="Concrete Kanvas — SYNK Collection">
+    <div class="hero-media" aria-hidden="true">
+      <img class="hero-slide is-active" src="img/ck.png" alt="" />
+      <img class="hero-slide" src="img/man.png" alt="" />
+      <img class="hero-slide" src="img/sweater.png" alt="" />
+      <img class="hero-slide" src="img/synk.png" alt="" />
     </div>
-
-    <div class="card">
-      <img src="img/ck.png" />
-      <h3>CK Hoodie</h3>
-      <p>$65</p>
-      <a href="https://www.tiktok.com/t/ZP9jnLoXGTjtt-8ySZu/" target="_blank"><button>View</button></a>
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="eyebrow">The SYNK Collection</p>
+      <h1 class="hero-title">Concrete<br />Kanvas</h1>
+      <p class="hero-sub">Streetwear built from graffiti, music, and digital culture.</p>
+      <a class="btn btn-paper" href="#shop">Shop the Collection</a>
     </div>
+  </section>
 
-    <div class="card">
-      <img src="img/glitch.png" />
-      <h3>Glitch City Tee</h3>
-      <p>$35</p>
-      <a href="https://www.tiktok.com/t/ZP9jnLwaCWPXF-VKpze/" target="_blank"><button>View</button></a>
+  <!-- SHOP — product grid renders from products.json (CK-003) -->
+  <section id="shop" class="shop reveal">
+    <div class="section-head">
+      <h2>SYNK Collection</h2>
+      <p class="section-sub">Three pieces. Printed to order. No noise.</p>
     </div>
+    <div id="product-grid" class="grid" aria-live="polite"></div>
+    <noscript><p class="noscript-note">The shop needs JavaScript turned on to show the collection.</p></noscript>
+  </section>
 
-  </div>
-</section>
+  <!-- FROM TIKTOK (CK-010) -->
+  <section id="tiktok" class="tiktok reveal">
+    <div class="section-head">
+      <h2>From TikTok</h2>
+      <p class="section-sub">The collection in motion — straight from the feed.</p>
+    </div>
+    <div class="grid grid-tiktok">
+      <a class="tk-card" href="https://www.tiktok.com/t/ZP9jnLguR1cBM-uHfts/" target="_blank" rel="noopener">
+        <img src="img/synk.png" alt="SYNK Tee" />
+        <span class="tk-label">SYNK Tee — watch on TikTok</span>
+      </a>
+      <a class="tk-card" href="https://www.tiktok.com/t/ZP9jnLoXGTjtt-8ySZu/" target="_blank" rel="noopener">
+        <img src="img/ck.png" alt="CK Hoodie" />
+        <span class="tk-label">CK Hoodie — watch on TikTok</span>
+      </a>
+      <a class="tk-card" href="https://www.tiktok.com/t/ZP9jnLwaCWPXF-VKpze/" target="_blank" rel="noopener">
+        <img src="img/glitch.png" alt="Glitch City Tee" />
+        <span class="tk-label">Glitch City Tee — watch on TikTok</span>
+      </a>
+    </div>
+  </section>
 
-<section id="vault" class="story">
-  <h2>The Vault</h2>
-  <p>Music, behind-the-scenes, and future drops coming soon.</p>
-</section>
+  <!-- DROP 01 — early-access capture via Netlify Forms (CK-006) -->
+  <section id="join" class="join reveal">
+    <p class="eyebrow eyebrow-accent">Drop 01</p>
+    <h2>First Access.<br />Before Everyone.</h2>
+    <p class="join-copy">Join the early-access list and you shop Drop 01 first — before it opens to everyone else.</p>
 
-<section class="story">
-  <h2>The Vision</h2>
-  <p>We are building a platform where ideas become expression.</p>
-</section>
+    <form id="drop-form" name="drop01-early-access" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+      <input type="hidden" name="form-name" value="drop01-early-access" />
+      <p class="hidden-field" aria-hidden="true">
+        <label>Don’t fill this out: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+      </p>
+      <div class="form-row">
+        <label class="sr-only" for="drop-email">Email address</label>
+        <input id="drop-email" type="email" name="email" placeholder="Your email" autocomplete="email" required />
+        <button class="btn btn-accent" type="submit">Join Early Access</button>
+      </div>
+      <p id="form-error" class="form-msg form-error" hidden>That didn’t go through — check the email and try again.</p>
+    </form>
+    <div id="form-success" class="form-msg form-success" hidden>
+      <p><strong>You’re in.</strong> First access to Drop 01 lands in your inbox before the drop opens.</p>
+    </div>
+  </section>
 
-<!-- ✅ NEW COMING SOON SECTION -->
-<section id="join" class="coming">
+  <!-- WORLD — Vision + Vault live here, below the shop (CK-008 / User Story 4) -->
+  <section id="world" class="world reveal">
+    <div class="section-head">
+      <h2>The World</h2>
+    </div>
+    <div class="world-grid">
+      <div class="world-block">
+        <h3>More Than Clothing</h3>
+        <p>Concrete Kanvas is a creative label built for creators, builders, and thinkers. It blends art, design, music, and technology into wearable ideas and digital expression.</p>
+      </div>
+      <div class="world-block">
+        <h3>The Vision</h3>
+        <p>We are building a platform where ideas become expression.</p>
+      </div>
+      <div class="world-block">
+        <h3>The Vault</h3>
+        <p>Music, behind-the-scenes, and the process behind the drops — the world behind the work.</p>
+      </div>
+    </div>
+    <p class="brand-line">Create. Build. Leave Your Mark.</p>
+  </section>
 
-  <h2>DROP 01 — COMING SOON</h2>
+</main>
 
-  <p>We are building something powerful.</p>
-
-  <p class="highlight">
-    Join early access for drops, music, and AI visuals.
-  </p>
-
-</section>
-
-<footer>
-  <p>© 2026 Concrete Kanvas</p>
+<footer class="site-footer">
+  <p class="footer-brand">Concrete Kanvas</p>
   <p>Create. Build. Leave Your Mark.</p>
+  <p><a href="#tiktok">TikTok</a> · <a href="#shop">Shop</a> · <a href="#join">Drop 01</a></p>
+  <p class="footer-fine">© 2026 Concrete Kanvas</p>
 </footer>
 
+<!-- PRODUCT DETAIL (CK-004) -->
+<div id="product-modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-name">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel">
+    <button class="modal-close" type="button" data-close aria-label="Close product view">×</button>
+    <img id="modal-img" class="modal-img" src="" alt="" />
+    <div class="modal-body">
+      <h3 id="modal-name"></h3>
+      <p id="modal-price" class="price"></p>
+      <p id="modal-blurb"></p>
+      <p class="size-label">Size</p>
+      <div id="modal-sizes" class="sizes" role="group" aria-label="Choose a size"></div>
+      <div id="modal-action" class="modal-action"></div>
+      <p class="modal-tiktok-wrap"><a id="modal-tiktok" href="https://www.tiktok.com/t/ZP9jnLguR1cBM-uHfts/" target="_blank" rel="noopener">Watch it on TikTok</a></p>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

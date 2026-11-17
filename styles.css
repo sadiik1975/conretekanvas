@@ -537,19 +537,57 @@ section { padding: var(--space-6) var(--space-3); }
   height: 100%;
   object-fit: contain;
   background: var(--ink);
+  transition: opacity 0.8s ease;
 }
+.ck-intro.is-ending video { opacity: 0; }
 
-.ck-intro-brand {
+.ck-intro-slogan {
   position: absolute;
   left: 0; right: 0;
   bottom: 13svh;
   text-align: center;
   font-family: var(--font-display);
-  font-size: clamp(1.6rem, 6vw, 2.6rem);
-  letter-spacing: 0.05em;
+  font-size: clamp(1.1rem, 4.5vw, 1.7rem);
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--paper);
   text-shadow: 0 2px 18px rgb(0 0 0 / 0.65);
+  transition: opacity 0.8s ease;
+}
+.ck-intro.is-ending .ck-intro-slogan { opacity: 0; }
+
+/* end card: the video fades into the business name, then the site */
+.ck-intro-card {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  text-align: center;
+  padding: var(--space-3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s ease;
+}
+.ck-intro.is-ending .ck-intro-card { opacity: 1; }
+
+.ck-intro-logo {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 11vw, 5.5rem);
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--paper);
+}
+
+.ck-intro-card-line {
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent);
 }
 
 .ck-intro-skip {

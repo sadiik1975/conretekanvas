@@ -200,6 +200,8 @@
     } else {
       intro.hidden = false;
       document.body.style.overflow = "hidden";
+      /* near the end, the video fades into the name card, then the site */
+      setTimeout(function () { intro.classList.add("is-ending"); }, 3200);
       document.getElementById("ck-intro-skip").addEventListener("click", dismissIntro);
       if (introVideo) {
         introVideo.addEventListener("ended", dismissIntro);

@@ -180,6 +180,37 @@
     }, 5000);
   }
 
+  /* ---------- intro splash: 5s video, skippable, once per session ---------- */
+  var intro = document.getElementById("ck-intro");
+  if (intro) {
+    var introVideo = document.getElementById("ck-intro-video");
+    var introDone = false;
+    function dismissIntro() {
+      if (introDone) return;
+      introDone = true;
+      try { sessionStorage.setItem("ckIntroSeen", "1"); } catch (e) {}
+      intro.hidden = true;
+      document.body.style.overflow = "";
+      if (introVideo) { try { introVideo.pause(); } catch (err) {} }
+    }
+    var introSeen = false;
+    try { introSeen = sessionStorage.getItem("ckIntroSeen") === "1"; } catch (e) {}
+    if (introSeen || reduceMotion) {
+      intro.hidden = true;
+    } else {
+      intro.hidden = false;
+      document.body.style.overflow = "hidden";
+      document.getElementById("ck-intro-skip").addEventListener("click", dismissIntro);
+      if (introVideo) {
+        introVideo.addEventListener("ended", dismissIntro);
+        introVideo.addEventListener("error", dismissIntro);
+        var playAttempt = introVideo.play();
+        if (playAttempt && playAttempt.catch) playAttempt.catch(function () {});
+      }
+      setTimeout(dismissIntro, 6000); /* hard cap — a visitor is never trapped */
+    }
+  }
+
   /* ---------- fade-in on scroll ---------- */
   var revealEls = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window && !reduceMotion) {

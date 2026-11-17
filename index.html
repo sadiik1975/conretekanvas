@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=8eaa20cf-2c94-4a40-82ba-f3cce254c0b5
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <title>Concrete Kanvas — SYNK Collection | Tees & Hoodies</title>
@@ -22,6 +25,13 @@
 
 <body>
 
+<!-- INTRO — 5-second video splash: plays on arrival (site or QR), skippable, once per session -->
+<div id="ck-intro" class="ck-intro" hidden>
+  <video id="ck-intro-video" src="videos/intro-5s.mp4" autoplay muted playsinline preload="auto"></video>
+  <div class="ck-intro-brand" aria-hidden="true">Concrete&nbsp;Kanvas</div>
+  <button id="ck-intro-skip" class="btn btn-paper ck-intro-skip" type="button">Skip Intro</button>
+</div>
+
 <!-- Announcement bar — owner-editable text. This is the page's single Drop 01 announcement element (CK-008). -->
 <div class="announce coming-soon">
   <span>DROP 01 — EARLY ACCESS OPEN</span>
@@ -31,6 +41,7 @@
   <a class="logo" href="#top">Concrete&nbsp;Kanvas</a>
   <nav class="main-nav" aria-label="Main">
     <a href="#shop">Shop</a>
+    <a href="#film">Film</a>
     <a href="#tiktok">Collection</a>
     <a href="#world">World</a>
   </nav>
@@ -58,6 +69,17 @@
       <h1 class="hero-title">Concrete<br />Kanvas</h1>
       <p class="hero-sub">Streetwear built from graffiti, music, and digital culture.</p>
       <a class="btn btn-paper" href="#shop">Shop the Collection</a>
+    </div>
+  </section>
+
+  <!-- THE FILM — the full SYNK video, on the page under the hero -->
+  <section id="film" class="film reveal">
+    <div class="section-head">
+      <h2>The Film</h2>
+      <p class="section-sub">The SYNK story in motion. Sound on.</p>
+    </div>
+    <div class="film-wrap">
+      <video class="film-video" src="videos/hero-video.mp4" controls autoplay muted loop playsinline preload="metadata" poster="img/synk.png"></video>
     </div>
   </section>
 

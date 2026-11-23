@@ -1,0 +1,51 @@
+services:
+  - type: web
+    name: conretekanvas
+    runtime: node
+    plan: starter
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /
+    disk:
+      name: concrete-kanvas-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SYNK_DATABASE_PATH
+        value: /var/data/synk.db
+      - key: COOKIE_SECURE
+        value: "true"
+      - key: SYNK_ADMIN_EMAIL
+        sync: false
+      - key: SYNK_ADMIN_PASSWORD_HASH
+        sync: false
+      - key: SYNK_SESSION_SECRET
+        generateValue: true
+      - key: RESEND_API_KEY
+        sync: false
+      - key: RESEND_FROM
+        sync: false
+      - key: PUBLIC_BASE_URL
+        value: https://conretekanvas.onrender.com
+      - key: SHOP_URL
+        value: https://conretekanvas.onrender.com/#shop
+      - key: UNSUBSCRIBE_SECRET
+        generateValue: true
+      - key: STRIPE_SECRET_KEY
+        sync: false
+      - key: STRIPE_WEBHOOK_SECRET
+        sync: false
+      - key: PRINTFUL_API_TOKEN
+        sync: false
+      - key: PRINTFUL_STORE_ID
+        value: "14198143"
+      - key: PRINTFUL_AUTO_CONFIRM
+        value: "false"
+      - key: STORE_CURRENCY
+        value: usd
+      - key: STORE_SHIPPING_CENTS
+        sync: false
+      - key: STORE_ALLOWED_COUNTRIES
+        value: US

@@ -2,9 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<!-- This site is hosted on Netlify. Anyone can build and deploy a site
-     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=8eaa20cf-2c94-4a40-82ba-f3cce254c0b5
-     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <title>Concrete Kanvas — SYNK Collection | Tees & Hoodies</title>
@@ -94,6 +91,7 @@
       <p class="section-sub">Three pieces. Printed to order. No noise.</p>
     </div>
     <div id="product-grid" class="grid" aria-live="polite"></div>
+    <p id="checkout-status" class="checkout-status" role="status" aria-live="polite"></p>
     <noscript><p class="noscript-note">The shop needs JavaScript turned on to show the collection.</p></noscript>
   </section>
 
@@ -119,27 +117,13 @@
     </div>
   </section>
 
-  <!-- DROP 01 — early-access capture via Netlify Forms (CK-006) -->
+  <!-- DROP 01 — SYNK early-access signup -->
   <section id="join" class="join reveal">
     <p class="eyebrow eyebrow-accent">Drop 01</p>
     <h2>First Access.<br />Before Everyone.</h2>
     <p class="join-copy">Join the early-access list and you shop Drop 01 first — before it opens to everyone else.</p>
 
-    <form id="drop-form" name="drop01-early-access" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
-      <input type="hidden" name="form-name" value="drop01-early-access" />
-      <p class="hidden-field" aria-hidden="true">
-        <label>Don’t fill this out: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
-      </p>
-      <div class="form-row">
-        <label class="sr-only" for="drop-email">Email address</label>
-        <input id="drop-email" type="email" name="email" placeholder="Your email" autocomplete="email" required />
-        <button class="btn btn-accent" type="submit">Join Early Access</button>
-      </div>
-      <p id="form-error" class="form-msg form-error" hidden>That didn’t go through — check the email and try again.</p>
-    </form>
-    <div id="form-success" class="form-msg form-success" hidden>
-      <p><strong>You’re in.</strong> First access to Drop 01 lands in your inbox before the drop opens.</p>
-    </div>
+    <a id="drop-signup" class="btn btn-accent" href="synk.html">Join Early Access</a>
   </section>
 
   <!-- WORLD — Vision + Vault live here, below the shop (CK-008 / User Story 4) -->

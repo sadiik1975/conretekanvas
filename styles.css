@@ -329,6 +329,12 @@ section { padding: var(--space-6) var(--space-3); }
 }
 
 .card .btn, .modal-action .btn { margin-top: var(--space-1); width: 100%; }
+.checkout-status {
+  min-height: 1.5rem;
+  margin-top: var(--space-2);
+  text-align: center;
+  color: var(--paper-dim);
+}
 
 .noscript-note { text-align: center; color: var(--paper-dim); }
 

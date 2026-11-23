@@ -20,8 +20,43 @@
   function scrollToJoin() {
     var join = document.getElementById("join");
     join.scrollIntoView({ behavior: "smooth" });
-    var email = document.getElementById("drop-email");
-    setTimeout(function () { email.focus({ preventScroll: true }); }, 600);
+    var signup = document.getElementById("drop-signup");
+    setTimeout(function () { signup.focus({ preventScroll: true }); }, 600);
+  }
+
+  function showCheckoutMessage(message) {
+    var status = document.getElementById("checkout-status");
+    status.textContent = message;
+  }
+
+  function startCheckout(p, button) {
+    var size = selectedSizes[p.id];
+    if (!size) {
+      showCheckoutMessage("Choose a size before checkout.");
+      return;
+    }
+    button.disabled = true;
+    button.textContent = "Opening checkout…";
+    showCheckoutMessage("");
+    fetch("/api/checkout", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ productId: p.id, size: size })
+    })
+      .then(function (res) {
+        return res.json().then(function (body) {
+          if (!res.ok) throw new Error(body.message || "Checkout is unavailable.");
+          return body;
+        });
+      })
+      .then(function (body) {
+        window.location.assign(body.url);
+      })
+      .catch(function (error) {
+        showCheckoutMessage(error.message);
+        button.disabled = false;
+        button.textContent = "Buy — " + formatPrice(p.price);
+      });
   }
 
   /* Build the action element for a product: real checkout link, the
@@ -34,6 +69,14 @@
       off.disabled = true;
       off.textContent = "Unavailable";
       return off;
+    }
+    if (p.checkout) {
+      var buy = document.createElement("button");
+      buy.className = "btn btn-accent";
+      buy.type = "button";
+      buy.textContent = "Buy — " + formatPrice(p.price);
+      buy.addEventListener("click", function () { startCheckout(p, buy); });
+      return buy;
     }
     var url = buyUrl(p);
     if (url) {
@@ -229,33 +272,6 @@
     revealEls.forEach(function (el) { el.classList.add("is-in"); });
   }
 
-  /* ---------- Drop 01 capture — Netlify Forms (CK-006) ---------- */
-  var form = document.getElementById("drop-form");
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    var email = document.getElementById("drop-email");
-    var error = document.getElementById("form-error");
-    var success = document.getElementById("form-success");
-    error.hidden = true;
-    if (!email.value || email.value.indexOf("@") < 1) {
-      error.hidden = false;
-      email.focus();
-      return;
-    }
-    var body = new URLSearchParams(new FormData(form)).toString();
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: body
-    }).then(function (res) {
-      if (!res.ok) throw new Error("submit failed");
-      form.hidden = true;
-      success.hidden = false;
-    }).catch(function () {
-      error.hidden = false;
-    });
-  });
-
   /* ---------- load the catalog ---------- */
   fetch("products.json")
     .then(function (res) {
@@ -265,6 +281,12 @@
     .then(function (data) {
       products = data.products || [];
       renderGrid();
+      var checkout = new URLSearchParams(window.location.search).get("checkout");
+      if (checkout === "success") {
+        showCheckoutMessage("Payment received. Printful will prepare and ship your order.");
+      } else if (checkout === "cancelled") {
+        showCheckoutMessage("Checkout cancelled. Your order was not placed.");
+      }
     })
     .catch(function () {
       document.getElementById("product-grid").innerHTML =

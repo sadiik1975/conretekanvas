@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>SYNK — Admin</title>
+  <link rel="stylesheet" href="/synk.css" />
+</head>
+<body class="admin-page">
+  <header class="admin-header">
+    <p class="brand">SYNK / ADMIN</p>
+    <button id="logout" type="button" hidden>Sign out</button>
+  </header>
+  <main>
+    <form id="login" class="panel">
+      <h1>Admin sign in</h1>
+      <label for="login-email">Email</label>
+      <input id="login-email" type="email" autocomplete="username" required />
+      <label for="login-password">Password</label>
+      <input id="login-password" type="password" autocomplete="current-password" required />
+      <button type="submit">Sign in</button>
+    </form>
+    <p id="status" class="message" role="status" aria-live="polite"></p>
+    <div id="dashboard" hidden>
+      <h1>Early access</h1>
+      <p>Total signups: <strong id="total">0</strong></p>
+      <button id="export" type="button">Export CSV</button>
+      <section class="panel">
+        <h2>Sources</h2>
+        <div id="sources"></div>
+      </section>
+      <section class="panel">
+        <h2>Signups</h2>
+        <div class="table-wrap">
+          <table><thead><tr><th>Email</th><th>Source</th><th>Date</th><th>Status</th></tr></thead><tbody id="signups"></tbody></table>
+        </div>
+        <p id="empty" class="muted" hidden>No signups yet.</p>
+      </section>
+      <section class="panel">
+        <h2>Send Drop Email</h2>
+        <p class="muted">Sends individually to subscribed SYNK contacts. Shop and unsubscribe links are added automatically.</p>
+        <form id="send-form">
+          <label for="subject">Subject</label>
+          <input id="subject" required maxlength="200" value="Drop 01 is LIVE — your early access is open" />
+          <label for="body">Message</label>
+          <textarea id="body" required maxlength="20000">Drop 01 is live. Your early access is open.</textarea>
+          <button type="submit">Send Drop Email</button>
+        </form>
+        <p id="send-status" role="status" aria-live="polite"></p>
+      </section>
+      <section class="panel">
+        <h2>Send history</h2>
+        <div class="table-wrap">
+          <table><thead><tr><th>Date</th><th>Subject</th><th>Accepted</th><th>Attempted</th><th>Failed</th><th>Status</th></tr></thead><tbody id="sends"></tbody></table>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="/synk-admin.js"></script>
+</body>
+</html>

@@ -1,11 +1,35 @@
-# Concrete Kanvas — Order Checklist (v1, manual fulfillment)
+# Concrete Kanvas — Order Checklist (Stripe + Printful)
 
 The store holds **no inventory**. Every piece is printed to order by
 **Printful**: the customer pays, Printful prints and ships, the owner never
-touches the product. In v1 the order step is manual — this checklist is how
-no paid order ever gets stranded (spec CK-013).
+touches the product. Successful Stripe checkout webhooks automatically submit paid orders to
+Printful. Printful receives the customer's shipping address and the exact
+Printful sync variant for the chosen size.
 
-## When a Stripe payment lands
+## Production configuration
+
+1. In Printful, choose **Connect via API**, create a private token, and select
+   the store containing these products.
+2. Add the Printful token and Stripe secret key to the deployment environment
+   using the names in `.env.example`. Never expose these values in browser code.
+3. In Stripe, register this webhook:
+   `https://YOUR-DOMAIN.example/api/stripe/webhook`
+   for `checkout.session.completed`. Put the webhook signing secret into
+   `STRIPE_WEBHOOK_SECRET`.
+4. Replace every `0` in each product's `printfulVariants` mapping with that
+   size's Printful **Sync Variant ID**.
+5. Set `PUBLIC_BASE_URL`, allowed shipping countries, currency, and the flat
+   shipping amount. Keep `PRINTFUL_AUTO_CONFIRM=false` for the first test so
+   Printful creates a draft rather than charging you. Then set it to `true` for
+   automatic fulfillment and use live Stripe keys only after the full test.
+
+## If automatic fulfillment fails
+
+The payment still succeeded. Check the server logs and the `checkout_orders`
+table, then manually place the order in Printful using the Stripe payment's
+details. Never mark an uncertain Printful request as automatically fulfilled.
+
+## Manual recovery when an order was not submitted
 
 1. Open the Stripe payment. Write down, from the receipt:
    - Product name (SYNK Tee / CK Hoodie / Glitch City Tee)
@@ -35,3 +59,4 @@ no paid order ever gets stranded (spec CK-013).
 
 - Scan Stripe for payments with no matching Printful order number. Any
   payment without a match is a stranded order — place it that day.
+- Review any `checkout_orders` rows whose status is `failed`.

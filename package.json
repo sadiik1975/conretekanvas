@@ -1,0 +1,12 @@
+{
+  "name": "concrete-kanvas",
+  "private": true,
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.js",
+    "test": "node --test",
+    "hash-synk-password": "node scripts/hash-synk-password.js"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
